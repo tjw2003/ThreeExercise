@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+    <link href="/css/bootstrap.css" rel="stylesheet">
+</head>
+
+<style>
+    a{
+        color: #fff;
+    }
+</style>
+<body>
+    <tr th:each="users:${users}">
+        <td th:text="${users.id}"></td>
+        <td th:text="${users.username}"></td>
+        <td th:text="${users.password}"></td>
+        <td>
+            <a class="btn btn-primary" th:href="@{'/updatePage/'+${users.id}}">更新</a>
+            <a class="btn btn-danger" th:href="@{'/delete/'+${users.id}}">删除</a>
+        </td>
+    </tr>
+</body>
+</html>

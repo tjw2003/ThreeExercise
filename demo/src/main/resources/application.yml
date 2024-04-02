@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/tb?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    initial-size: 10
+    max-active: 20
+    min-idle: 8
+
+# 静态资源配置
+resources:
+  static-locations: classpath:static/
+
+# thymeleaf模板引擎配置
+thymeleaf:
+  prefix: classpath:/templates/
+  suffix: .html
+  mode: HTML5
+  encoding: UTF-8
+  content-type: text/html
+  cache: false
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.example.demo.bean
+
+logging:
+  level:
+    com:
+      example:
+        demo2:
+          mapper: debug

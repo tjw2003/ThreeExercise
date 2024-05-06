@@ -44,6 +44,18 @@
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
 
+		<!--        Swagger3 dependency-->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-boot-starter</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
 		<!--springboot与mybatis的整合包-->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
